@@ -1,4 +1,8 @@
-import { Box, Container, Heading, Image, useColorModeValue } from "@chakra-ui/react"
+import { ChevronRightIcon } from "@chakra-ui/icons"
+import { Box, Button, Container, Heading, Image, Link, List, ListItem, useColorModeValue } from "@chakra-ui/react"
+import NextLink from 'next/link'
+import { BioSection, BioYear } from "../components/bio"
+import Paragraph from "../components/paragraph"
 import Section from "../components/section"
 // import Image from "next/image"
 
@@ -23,8 +27,88 @@ const Page = () => {
         <Heading as='h3' variant='section-title'>
           Work
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          David is a freelance and a full-stack developer based in San Antoon with a
+          passion for building digital services/stuff he wants. He has a knack
+          for all things launching products, from planning and designing all the
+          way to solving real-life problems with code. When not online, he loves
+          hanging out with his camera. Currently, he is living off of his own
+          product called{' '}
+          <NextLink href="/works/" passHref scroll={false}>
+            <Link>Inkdrop</Link>
+          </NextLink>
+          . He publishes content for marketing his products and his YouTube
+          channel called &quot;
+          <NextLink href="https://www.youtube.com/" passHref>
+            <Link target="_blank">Dev as Life</Link>
+          </NextLink>
+          &quot; has more than 100k subscribers.
+        </Paragraph>
+        <Box align='center' my={4}>
+          <NextLink href='/works'>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme='teal'>
+              My Portfolio
+            </Button>
+          </NextLink>
+        </Box>
       </Section>
+
+      <Section delay={0.2}>
+        <Heading as='h3' variant='section-title'>
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>
+            1999
+          </BioYear>
+            Born in San Anton (Puno), Peru.
+        </BioSection>
+        <BioSection>
+          <BioYear>2015</BioYear>
+          Completed the Bachelor Program at the Faculty of Engineering and 
+          Architecture of the Academic School of Systems Engineering at the 
+          Universidad Peruana Union
+        </BioSection>
+        <BioSection>
+          <BioYear>2010</BioYear>
+          Worked at Yahoo! Japan
+        </BioSection>
+        <BioSection>
+          <BioYear>2012 to present</BioYear>
+          Working as a freelancer
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ♥
+        </Heading>
+        <Paragraph>
+          Art, Music,{' '}
+          <Link href="https://illust.odoruinu.net/" target="_blank">
+            Drawing
+          </Link>
+          , Playing Drums,{' '}
+          <Link href="https://500px.com/p/craftzdog" target="_blank">
+            Photography
+          </Link>
+          , Leica, Machine Learning
+        </Paragraph>
+      </Section>
+
+      <Section delay={0.3}>
+      <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link>
+              
+            </Link>
+          </ListItem>
+        </List>
+      </Section>
+
     </Container>
   )
 }
