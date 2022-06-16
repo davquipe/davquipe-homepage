@@ -2,6 +2,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons"
 import { Box, Button, Container, Heading, Image, Link, List, ListItem, useColorModeValue } from "@chakra-ui/react"
 import NextLink from 'next/link'
 import { BioSection, BioYear } from "../components/bio"
+import { RiGithubLine, RiInstagramLine, RiTwitterLine } from 'react-icons/ri';
 import Paragraph from "../components/paragraph"
 import Section from "../components/section"
 // import Image from "next/image"
@@ -64,17 +65,17 @@ const Page = () => {
             Born in San Anton (Puno), Peru.
         </BioSection>
         <BioSection>
-          <BioYear>2015</BioYear>
+          <BioYear>2020</BioYear>
           Completed the Bachelor Program at the Faculty of Engineering and 
           Architecture of the Academic School of Systems Engineering at the 
           Universidad Peruana Union
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan
+          <BioYear>2021</BioYear>
+          Worked at Yahoo! Peru
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
+          <BioYear>2022 to present</BioYear>
           Working as a freelancer
         </BioSection>
       </Section>
@@ -88,11 +89,11 @@ const Page = () => {
           <Link href="https://illust.odoruinu.net/" target="_blank">
             Drawing
           </Link>
-          , Playing Drums,{' '}
+          , Playing Scoccer,{' '}
           <Link href="https://500px.com/p/craftzdog" target="_blank">
             Photography
           </Link>
-          , Leica, Machine Learning
+          , IA, Machine Learning
         </Paragraph>
       </Section>
 
@@ -102,8 +103,36 @@ const Page = () => {
         </Heading>
         <List>
           <ListItem>
-            <Link>
-              
+            <Link href="https://github.com/davquipe" target="_blank">
+              <Button 
+                variant='ghost'
+                colorScheme='teal'
+                leftIcon={<RiGithubLine />}
+              >
+                @davquipe
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/davquipe" target="_blank">
+              <Button 
+                variant='ghost'
+                colorScheme='teal'
+                leftIcon={<RiTwitterLine />}
+              >
+                @davquipe
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/davquipe" target="_blank">
+              <Button 
+                variant='ghost'
+                colorScheme='teal'
+                leftIcon={<RiInstagramLine />}
+              >
+                @davquipe
+              </Button>
             </Link>
           </ListItem>
         </List>
