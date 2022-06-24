@@ -74,11 +74,11 @@ const Page = () => {
           </BioSection>
           <BioSection>
             <BioYear>2021</BioYear>
-            Worked at Yahoo! Peru
+            Internship in Vitaltec Chile
           </BioSection>
           <BioSection>
             <BioYear>2022 to present</BioYear>
-            Working as a freelancer
+            In Consigue Ventas Perú
           </BioSection>
         </Section>
 
