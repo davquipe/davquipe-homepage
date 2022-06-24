@@ -3,18 +3,21 @@ import NextLink from 'next/link'
 import { Container, Box, Link, useColorModeValue, Flex, Heading, Stack, Menu, MenuButton, IconButton, MenuList, MenuItem } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import { RiGithubLine } from 'react-icons/ri';
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, children, target, ...props }) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
 
 
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref scroll={false}>
         <Link
             p={2}
             bg={ active ? 'glassTeal' : undefined }
             color={ active ? '#202023' : inactiveColor }
+            target={target}
+            {...props}
         >
             {children}
         </Link> 
@@ -62,6 +65,18 @@ const Navbar = props => {
                     <LinkItem href='/posts' path={path}>
                         Posts
                     </LinkItem>
+                    <LinkItem 
+                        target='_blank'
+                        href='https://github.com/davquipe/davquipe-homepage'
+                        path={path}
+                        display='inline-flex'
+                        alignItems='center'
+                        style={{ gap: 4 }}
+                        pl={2}
+                    >
+                        <RiGithubLine />
+                        Source
+                    </LinkItem>
                 </Stack>
                 <Box flex={1} align='right'>
                     <ThemeToggleButton />
@@ -84,7 +99,7 @@ const Navbar = props => {
                                         Posts
                                     </MenuItem>
                                 </NextLink>
-                                <NextLink href='https://github.com/davquipe/davquipe-portfolio' passHref>
+                                <NextLink href='https://github.com/davquipe/davquipe-homepage' passHref>
                                     <MenuItem as={Link}>
                                         View Source
                                     </MenuItem>
