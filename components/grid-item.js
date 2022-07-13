@@ -6,7 +6,7 @@ import NextLink from 'next/link'
 export const GridItem = ({ children, href, title, thumbnail }) => (
     <Box w='100%' align='center'>
         <LinkBox cursor='pointer'>
-            <Image 
+            <Image
                 src={thumbnail}
                 alt={title}
                 className='grid-item-thumbnail'
@@ -14,9 +14,9 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
                 loading='lazy'
             />
             <LinkOverlay href={href} target='_blank'>
-                <Text mt='2'>{ title }</Text>
+                <Text mt='2'>{title}</Text>
             </LinkOverlay>
-                <Text fontSize={14}>{ children }</Text>
+            <Text fontSize={14}>{children}</Text>
         </LinkBox>
 
     </Box>
@@ -28,16 +28,16 @@ export const WorkGridItem = ({
     title,
     thumbnail
 }) => (
-    <Box w='100%' align='center'> 
-        <NextLink href={`/works/${ id }`}>
+    <Box w='100%' align='center'>
+        <NextLink href={`/work/${id}`}>
             <LinkBox cursor='pointer'>
-                <Image src={ thumbnail } alt={ title } className='grid-item-thumbnail' placeholder='blur' />
-                <LinkOverlay href={`/works/${ id }`}>
+                <Image src={thumbnail} alt={title} className='grid-item-thumbnail' placeholder='blur' />
+                <LinkOverlay href={`/works/${id}`}>
                     <Text mt={2} fontSize={20}>
-                        { title }
+                        {title}
                     </Text>
                 </LinkOverlay>
-                <Text fontSize={14}>{ children }</Text>
+                <Text fontSize={14}>{children}</Text>
             </LinkBox>
         </NextLink>
     </Box>

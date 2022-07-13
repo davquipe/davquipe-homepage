@@ -15,26 +15,26 @@ const Page = () => {
         <Box borderRadius='lg' bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align='center'>
           Hello, I&apos;m a Front-End developer from Peru!
         </Box>
-        <Box display={{md: 'flex'}}>
-            <Box flexGrow={1}>
-              <Heading as='h2' variant='page-title'>
-                David Condori
-              </Heading>
-              <p>Digital Craftman ( Developer / Desingner )</p>
-            </Box>
-            <Box flexShrink={0} mt={{base: 4, md: 0}} ml={{md: 6}} align='center'>
-              <Image borderColor='whiteAlpha.800' borderWidth={2} borderStyle='solid' maxWidth='100px' display='inline-block' borderRadius='full' src='/images/david.jpg' alt="Profile Image"/>
-            </Box>
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Heading as='h2' variant='page-title'>
+              David Condori
+            </Heading>
+            <p>Digital Craftman ( Developer / Desingner )</p>
+          </Box>
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} align='center'>
+            <Image borderColor='whiteAlpha.800' borderWidth={2} borderStyle='solid' maxWidth='100px' display='inline-block' borderRadius='full' src='/images/david.jpg' alt="Profile Image" />
+          </Box>
         </Box>
         <Section delay={0.1}>
           <Heading as='h3' variant='section-title'>
             Work
           </Heading>
           <Paragraph>
-            David is a Front-End Developer with proven experience in the development 
-            in helping companies create and maintain a better code base 
-            for reusability. Passionate about learning and development with a desire 
-            to apply skills on a larger development. Eager to tackle 
+            David is a Front-End Developer with proven experience in the development
+            in helping companies create and maintain a better code base
+            for reusability. Passionate about learning and development with a desire
+            to apply skills on a larger development. Eager to tackle
             more complex problems and continue to find ways to maximize user efficiency.
             passion for building digital services/stuff he wants. He has a knack
             for all things launching products, from planning and designing all the
@@ -68,12 +68,12 @@ const Page = () => {
             <BioYear>
               1999
             </BioYear>
-              Born in San Anton (Puno), Peru.
+            Born in San Anton, Peru.
           </BioSection>
           <BioSection>
             <BioYear>2020</BioYear>
-            Completed the Bachelor Program at the Faculty of Engineering and 
-            Architecture of the Academic School of Systems Engineering at the 
+            Completed the Bachelor Program at the Faculty of Engineering and
+            Architecture of the Academic School of Systems Engineering at the
             Universidad Peruana Union
           </BioSection>
           <BioSection>
@@ -104,13 +104,13 @@ const Page = () => {
         </Section>
 
         <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+          <Heading as="h3" variant="section-title">
             On the web
           </Heading>
           <List>
             <ListItem>
               <Link href="https://github.com/davquipe" target="_blank">
-                <Button 
+                <Button
                   variant='ghost'
                   colorScheme='teal'
                   leftIcon={<RiGithubLine />}
@@ -121,7 +121,7 @@ const Page = () => {
             </ListItem>
             <ListItem>
               <Link href="https://twitter.com/davquipe" target="_blank">
-                <Button 
+                <Button
                   variant='ghost'
                   colorScheme='teal'
                   leftIcon={<RiTwitterLine />}
@@ -132,7 +132,7 @@ const Page = () => {
             </ListItem>
             <ListItem>
               <Link href="https://instagram.com/davquipe" target="_blank">
-                <Button 
+                <Button
                   variant='ghost'
                   colorScheme='teal'
                   leftIcon={<RiInstagramLine />}

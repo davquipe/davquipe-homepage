@@ -10,40 +10,40 @@ const LinkItem = ({ href, path, children, target, ...props }) => {
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
 
 
-  return (
-    <NextLink href={href} passHref scroll={false}>
-        <Link
-            p={2}
-            bg={ active ? 'glassTeal' : undefined }
-            color={ active ? '#202023' : inactiveColor }
-            target={target}
-            {...props}
-        >
-            {children}
-        </Link> 
-    </NextLink>
-  )
+    return (
+        <NextLink href={href} passHref scroll={false}>
+            <Link
+                p={2}
+                bg={active ? 'glassTeal' : undefined}
+                color={active ? '#202023' : inactiveColor}
+                target={target}
+                {...props}
+            >
+                {children}
+            </Link>
+        </NextLink>
+    )
 }
 
 const Navbar = props => {
     const { path } = props
 
     return (
-        <Box 
+        <Box
             position='fixed'
-            as='nav' 
+            as='nav'
             w='100%'
-            bg={ useColorModeValue('#ffffff40', '#20202380') }
-            style={{backdropFilter: 'blur(10px)'}}
-            zIndex={1}
+            bg={useColorModeValue('#ffffff40', '#20202380')}
+            style={{ backdropFilter: 'blur(10px)' }}
+            zIndex={2}
             {...props}
         >
-            <Container 
-                display='flex' 
-                p={2} 
-                maxW='container.md' 
-                wrap='wrap' 
-                align='center' 
+            <Container
+                display='flex'
+                p={2}
+                maxW='container.md'
+                wrap='wrap'
+                align='center'
                 justify='space-between'
             >
                 <Flex align='center' mr={5}>
@@ -65,7 +65,7 @@ const Navbar = props => {
                     <LinkItem href='/posts' path={path}>
                         Posts
                     </LinkItem>
-                    <LinkItem 
+                    <LinkItem
                         target='_blank'
                         href='https://github.com/davquipe/davquipe-homepage'
                         path={path}
